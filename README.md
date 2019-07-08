@@ -2,6 +2,10 @@
 
 Android Asset Packaging Tool for Python3
 
+## Install
+
+`pip3 install aapt`
+
 ## Example
 
 ```python
