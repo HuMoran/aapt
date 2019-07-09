@@ -17,7 +17,7 @@ with open("README.md", "r") as fh:
 
 setup(
     name="aapt",
-    version="1.0.1",
+    version="1.0.2",
     keywords=("aapt", "apktool"),
     description="Android Asset Packaging Tool for Python3",
     long_description=long_description,

@@ -103,9 +103,10 @@ def get_apk_and_icon(file_path):
         if (apkInfo['icon_path']):
             out = subprocess.check_output('unzip' + ' -p ' + file_path + ' ' + apkInfo['icon_path'], shell=True)
             byte_stream = io.BytesIO(out)
-            apkInfo['icon_byte_stream'] = byte_stream
+            apkInfo['icon_byte_value'] = byte_stream.getvalue()
+            byte_stream.close()
         else:
-            apkInfo['icon_byte_stream'] = None
+            apkInfo['icon_byte_value'] = None
         return apkInfo
     except Exception as e:
         raise e

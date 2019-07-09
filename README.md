@@ -13,14 +13,20 @@ print(help)
 ls = aapt.ls('./xx.apk')
 print(ls)
 
-apk_info = get_apk_info('./xxx.apk')
+apk_info = aapt.get_apk_info('./xxx.apk')
 print(apk_info)
 
-apk_info = get_apk_and_icon('./xxx.apk')
 # save icon
 from PIL import Image
-img = Image.open(apk_info['icon_byte_stream'])
+apk_info = aapt.get_apk_and_icon('./xxx.apk')
+byte_stream = io.BytesIO(apk_info['icon_byte_value'])
+img = Image.open(byte_stream)
 img.save('./1.png')
+
+# upload file
+
+requests.post(url, files={'file': apk_info['icon_byte_value']})
+
 ```
 
 ## API
