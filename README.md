@@ -6,6 +6,8 @@ Android Asset Packaging Tool for Python3
 
 `pip3 install aapt`
 
+Your can easily check your installation with `python -c "import aapt; print(aapt.version())"`.
+
 ## Example
 
 ```python
