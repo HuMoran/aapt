@@ -25,7 +25,7 @@ setup(
     url="https://github.com/HuMoran/aapt",
     author="Tao.Hu",
     author_email="htax2013@gmail.com",
-    packages=find_packages(),
+    py_modules=['aapt'],
     include_package_data=True,
     platforms="any",
     install_requires=[],
