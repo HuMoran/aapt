@@ -27,7 +27,7 @@ def aapt(args='--help'):
         if (system_name != 'Darwin' and system_name != 'Linux' and system_name != 'Windows'):
             raise TypeError('unknown system type, only support Darwin、Linux、Windows')
 
-        aapt_path = os.path.join(os.getcwd(), 'bin', system_name, 'aapt_64')
+        aapt_path = os.path.join(os.path.dirname(__file__), 'bin', system_name, 'aapt_64')
         if system_name == 'Windows':
             aapt_path += '.exe'
 
