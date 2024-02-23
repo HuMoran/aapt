@@ -47,3 +47,9 @@ requests.post(url, files={'file': apk_info['icon_byte_value']})
 * single_crunch(input_file, output_file):
 * version()
 * get_apk_info(file_path)
+# https://tea.xyz/what-is-this-file
+---
+version: 1.0.0
+codeOwners:
+  - '0xEbB4102D4561283a02a304d04C9BAC2204cEd944'
+quorum: 1
